@@ -23,7 +23,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
 
   addBtn.addEventListener('click', (e) => {
     // hide our user interface that shows our A2HS button
-    addBtn.style.display = 'none';
+    // addBtn.style.display = 'none';
     // 展现安装的 prompt
     deferredPrompt.prompt();
     // 等待用户对 prompt 进行操作
