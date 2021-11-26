@@ -1,0 +1,15 @@
+{
+    "background_color": "purple",
+    "display": "fullscreen",
+    "icons": [
+      {
+        "src": "icon/mini.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }
+    ],
+    "name": "测试快捷版",
+    "short_name": "快",
+    "start_url": "."
+  }
+  
