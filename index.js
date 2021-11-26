@@ -8,7 +8,7 @@ const addBtn = document.getElementById('notifications');
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js', {scope: '/'})
+    navigator.serviceWorker.register('./sw.js', {scope: '/'})
       .then(function (registration) {
         // 注册成功
         console.log('ServiceWorker registration successful with scope: ', registration.scope)
@@ -44,6 +44,11 @@ if ('serviceWorker' in navigator) {
     //     }
     //     deferredPrompt = null;
     //   });
+    Notification.requestPermission().then((result) => {
+      if (result === 'granted') {
+        // randomNotification();
+      }
+    });
   });
 // });
 // 无论以何种方式安装 PWA 该事件都会触发
