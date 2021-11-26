@@ -30,9 +30,7 @@
             document.getElementById("send").onclick = ()=> {
 
                 const value = document.getElementById("text").value
-                for (let index = 0; index < 10; index++) {
-                    ws.send(JSON.stringify({msg:index}))
-                }
+                ws.send(JSON.stringify({msg:value}))
                     
             }
         }
