@@ -4,41 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>add to desktop</title>
+    <title>PWA</title>
 
-    <style>
-        .add-button {
-        position: absolute;
-        top: 1px;
-        left: 1px;
-        }
     </style>
+    <link rel="manifest" href="manifest.json">
     <script src="index.js" defer></script>
-    <link rel="manifest" href="manifest.webmanifest">
 </head>
 <body>
-    <button class="add-button">添加到桌面</button>
     <br>
     <br>
-    <input type="text" id="text">
-    <button id="send"> send</button>
-    <script>
-
-        const ws = new WebSocket("ws://localhost:3002")
-        ws.onopen = ()=> {
-
-            document.getElementById("send").onclick = ()=> {
-
-                const value = document.getElementById("text").value
-                ws.send(JSON.stringify({msg:value}))
-                    
-            }
-        }
-
-        ws.onmessage = (e)=> {
-            console.log("onmessage:", e.data)
-        }
-
-    </script>
+    <button id="notifications">添加到桌面</button>
+    <br>
+    <br>
+    
+    <div>P --- W ---- A</div>
 </body>
 </html>
