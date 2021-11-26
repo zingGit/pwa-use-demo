@@ -12,7 +12,7 @@ if('serviceWorker' in navigator) {
 }
 
 // 仅浏览器支持且未安装该应用，以下事件才会触发
-window.addEventListener('beforeinstallprompt', (e) => {
+// window.addEventListener('beforeinstallprompt', (e) => {
   // Chrome 67 及之前版本，会自动展现安装的 prompt
   // 为了版本统一及用户体验，我们禁止自动展现 prompt
   e.preventDefault();
@@ -37,7 +37,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
         deferredPrompt = null;
       });
   });
-});
+// });
 // 无论以何种方式安装 PWA 该事件都会触发
 // 因此这里可以用来做埋点
 window.addEventListener('appinstalled', (evt) => {
